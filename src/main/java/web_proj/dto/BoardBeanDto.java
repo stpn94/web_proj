@@ -16,11 +16,30 @@ public class BoardBeanDto {
 	private int board_readcount;
 	private Date board_date;
 
+	@Override
+	public String toString() {
+		return String.format(
+				"BoardBeanDto [board_num=%s, board_name=%s, board_pass=%s, board_subject=%s, board_content=%s, board_file=%s, board_re_ref=%s, board_re_lev=%s, board_re_seq=%s, board_readcount=%s, board_date=%s]",
+				board_num, board_name, board_pass, board_subject, board_content, board_file, board_re_ref, board_re_lev,
+				board_re_seq, board_readcount, board_date);
+	}
+
 	public BoardBeanDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
+	public BoardBeanDto(String board_name, String board_pass, String board_subject, String board_content,
+			String board_file) {
+		this.board_name = board_name;
+		this.board_pass = board_pass;
+		this.board_subject = board_subject;
+		this.board_content = board_content;
+		this.board_file=board_file;
+	}
+	
+
+
 	public BoardBeanDto(int board_num, String board_name, String board_pass, String board_subject, String board_content,
 			String board_file, int board_re_ref, int board_re_lev, int board_re_seq, int board_readcount,
 			Date board_date) {
@@ -37,8 +56,6 @@ public class BoardBeanDto {
 		this.board_readcount = board_readcount;
 		this.board_date = board_date;
 	}
-
-	
 
 	public int getBoard_num() {
 		return board_num;

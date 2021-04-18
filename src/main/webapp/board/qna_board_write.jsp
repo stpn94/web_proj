@@ -5,43 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>MVC 게시판</title>
-<style type="text/css">
-#regustForm {
-	width: 500px;
-	height: 610px;
-	border: 1px solid red;
-	margin: auto;
-}
+<link rel="stylesheet" href="<%=request.getContextPath()%>/css/write.css">
 
-h2 {
-	text-align: center;
-}
-
-table {
-	margin: auto;
-	width: 450px;
-}
-
-.td_left {
-	width: 150px;
-	background: orange;
-}
-
-.td_right {
-	width: 300px;
-	background: skyblue;
-}
-
-#commandCell {
-	text-align: skyblue;
-}
-</style>
 </head>
 <body>
 	<!--게시판 등록-->
-	<section id="writeForm">
+	<section id="registForm">
 		<h2>게시판글등록</h2>
-		<form action="boardWrithePro.do" method="get"
+		<form action="boardWritePro.do" method="post"
 			enctype="multipart/form-data" name="boardform">
 			<table>
 				<tr>
@@ -66,11 +37,13 @@ table {
 				</tr>
 			</table>
 			<section id= "commandCell">
-				<input type ="submit" value="등록">&nbsp;&nbsp;
+				<input type ="submit" value="등록">&nbsp;&nbsp;<!--띄어쓰기-->
 				<input type ="reset" value="다시 쓰기" >
 			</section>
 		</form>
 	</section>
 <!--게시판 등록-->
+<!-- &nbsp;&nbsp; 띄어쓰기-->
+<!-- required 반드시 입력-->
 </body>
 </html>

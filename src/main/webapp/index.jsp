@@ -8,8 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-방가방가!
-<%=JndiDs.getConnection() %>
+<!-- 방가방가! -->
+<%-- <%=JndiDs.getConnection() %> --%>
 <a href="boardWriteForm.do">게시판글쓰기</a>
 </body>
 </html>
