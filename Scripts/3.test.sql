@@ -46,4 +46,19 @@ select * from board where BOARD_NUM = 3;
 -- read board
 update board set BOARD_READCOUNT =BOARD_READCOUNT + 1 where BOARD_NUM = 3;
 
+-- reply
+update board set BOARD_RE_SEQ = BOARD_RE_SEQ + 1
+where BOARD_RE_REF=68 and BOARD_RE_SEQ > 0;
 
+select * from board b;
+where BOARD_RE_REF=0 and BOARD_RE_SEQ > 0;
+
+INSERT INTO web_gradle_erp.board
+(BOARD_NUM, BOARD_NAME, BOARD_PASS, BOARD_SUBJECT, BOARD_CONTENT, BOARD_FILE, BOARD_RE_REF)
+VALUES(50, '김상건', '1111', '마칠시간', '5시', 'test.txt', 50);
+
+-- delete
+select 1 from board where board_num = 62 and BOARD_PASS = 12 ;\
+-- return 이 1이면 True 0이면 fulse(게시글 넘버와 패스워드가 일치하면 1 )
+
+delete from board where BOARD_NUM = ?

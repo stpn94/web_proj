@@ -27,6 +27,7 @@
 					<td>날짜</td>
 					<td>조회수</td>
 				</tr>
+			
 				<c:choose>
 					<c:when test="${fn:length(articleList) != 0 && pageInfo.listCount > 0 }">
 						<c:forEach var="board" items="${articleList }">

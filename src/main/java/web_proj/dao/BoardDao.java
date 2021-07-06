@@ -21,5 +21,6 @@ public interface BoardDao {
 	int deleteArticle(int board_num);
 
 	int updateReadCount(int board_num);
+	
 	int nextBoardNum();
 }

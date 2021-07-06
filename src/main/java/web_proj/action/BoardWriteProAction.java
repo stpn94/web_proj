@@ -49,10 +49,11 @@ public class BoardWriteProAction implements Action {
 		} else {
 			// 등록실패하면 등록실패 시키고 뒤로가기
 			PrintWriter out = response.getWriter();
-			out.println("<script>");
-			out.println("alert('등록실패')");
-			out.println("history.back();");
-			out.println("</script>");
+//			out.println("<script>");
+//			out.println("alert('등록실패')");
+//			out.println("history.back();");
+//			out.println("</script>");
+			System.out.println("아아아아아ㅏㅇ");
 			
 		}
 
